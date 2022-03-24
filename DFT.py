@@ -17,9 +17,8 @@ with open("real-data-24-1.csv", newline='') as data:
 
 T = sample_num/SAMPLE_RATE
 
-dft_matrix = linalg.dft(sample_num)
-complex_data = starting_data @ dft_matrix
-# complex_data = complex_data[:sample_num//2
+dft_matrix = linalg.dft(sample_num)  # creates DFT matrix
+complex_data = starting_data @ dft_matrix  # multiply matrices
 complex_data = [i for i in complex_data]
 
 data_arguments = [np.angle(i) for i in complex_data]
