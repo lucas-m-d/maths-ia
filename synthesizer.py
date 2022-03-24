@@ -8,7 +8,7 @@ import csv
 sample_freq = 44100
 length = 3
 datapoints = np.arange(0, length, 1/sample_freq)
-fundamental = 440
+fundamental = 259.4117647058824 # change to acheive desired fundamental
 with open('out.csv', newline='') as out:
     rows = []
     reader = csv.reader(out)
